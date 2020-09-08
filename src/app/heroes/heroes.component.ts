@@ -10,7 +10,7 @@ import { MessageService } from '../message.service';
   styleUrls: ['./heroes.component.scss'],
 })
 export class HeroesComponent implements OnInit {
-  selectedHero: Hero;
+  // selectedHero: Hero;
   heroes: Hero[];
   // hero = 'Windstorm';
   hero: Hero = {
@@ -18,19 +18,19 @@ export class HeroesComponent implements OnInit {
     name: 'Windstorm',
   };
   constructor(
-    private heroService: HeroService,
-    private messageSerivce: MessageService
-  ) {}
+    private heroService: HeroService
+  ) // private messageSerivce: MessageService
+  {}
 
   ngOnInit(): void {
     this.getHeroes();
   }
 
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-    this.messageSerivce.add(`HeroesComponent: Selected hero id=${hero.id}`);
-    // console.log('aaa');
-  }
+  // onSelect(hero: Hero): void {
+  //   this.selectedHero = hero;
+  //   this.messageSerivce.add(`HeroesComponent: Selected hero id=${hero.id}`);
+  //   // console.log('aaa');
+  // }
 
   // heroes = HEROES;
   getHeroes(): void {
