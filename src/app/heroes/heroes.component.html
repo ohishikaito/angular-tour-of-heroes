@@ -1,3 +1,12 @@
+<div>
+  <label
+    >Hero name:
+    <input #heroName />
+  </label>
+  <!-- (click) 入力値をadd()に渡したあと、入力をクリアする -->
+  <button (click)="add(heroName.value); heroName.value = ''">add</button>
+</div>
+
 <h2>{{ hero.name | uppercase }} Details</h2>
 <div><span>id: </span>{{ hero.id }}</div>
 <div><span>name: </span>{{ hero.name }}</div>
@@ -20,6 +29,9 @@
       </span>
       {{ hero.name }}</a
     >
+    <button class="delete" title="delete hero" (click)="delete(hero)">
+      xxx
+    </button>
   </li>
 </ul>
 <!-- <app-hero-detail [hero]="selectedHero"></app-hero-detail> -->
